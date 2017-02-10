@@ -1,8 +1,12 @@
 package seedu.addressbook.storage;
 
 import static org.junit.Assert.assertEquals;
+
 import java.nio.file.Paths;
 import java.util.Collections;
+
+import javax.swing.DebugGraphics;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -71,7 +75,6 @@ public class StorageFileTest {
         AddressBook ab = getTestAddressBook();
         StorageFile storage = getTempStorage();
         storage.save(ab);
-
         assertStorageFilesEqual(storage, getStorage("ValidData.xml"));
     }
 
